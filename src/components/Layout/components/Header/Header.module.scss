@@ -91,7 +91,11 @@
     &:active{
         background-color: rgba(22, 24, 35, .06);
     }
-
 }
 
-
+.mode-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    background-color: transparent;
+    padding: 4px 8px;
+}
