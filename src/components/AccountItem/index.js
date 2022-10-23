@@ -19,7 +19,6 @@ function AccountItem() {
                 <span className={cx('username')}>Nguyenvana</span>
             </div>
         </div>
-        // dsaf
     );
 }
 
