@@ -20,7 +20,9 @@
     padding: 0px var(--default-layout-horizontal-spacer);
 }
 
-
+.logo-link{
+    display: flex;
+}
 
 // action
 .action {
@@ -57,7 +59,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--white);
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(-fonts-family);
     background-color: var(--primary);
 }
 
