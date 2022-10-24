@@ -25,6 +25,8 @@ import { useState } from 'react';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { MailBox, MessageIcon } from '~/components/Icons';
+import Image from '~/components/Image'
 
 const cx = classNames.bind(styles);
 
@@ -146,6 +148,12 @@ function Header() {
                                     <FontAwesomeIcon icon={faCloudUpload} />
                                 </button>
                             </Tippy>
+                            <button className={cx('action-btn')}>
+                                <MessageIcon width="2.6rem" height="2.6rem" />
+                            </button>
+                            <button className={cx('action-btn')}>
+                                <MailBox />
+                            </button>
                         </>
                     ) : (
                         <>
@@ -154,12 +162,13 @@ function Header() {
                         </>
                     )}
                     {/* <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={onChangeMenuChange}> */}
-                    <Menu items={currentUser  ? userMenu : MENU_ITEMS} onChange={onChangeMenuChange}>
+                    <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={onChangeMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/1e2f00fc46a24efef4245d6734fe20dd~c5_100x100.jpeg?x-expires=1666688400&x-signature=KmuheyAR3I1FdgH0iGoCkX82WPU%3D"
                                 alt="nguyen van a"
+                                fallback="https://yt3.ggpht.com/wgneNTiW753q5G6XMnjyNLAzReR4TVFJryTKTpIqJefrKMyhABPwfnyNWIoT5NNGstFlva1tgw=s88-c-k-c0x00ffffff-no-rj"
                             />
                         ) : (
                             <button className={cx('mode-btn')}>
