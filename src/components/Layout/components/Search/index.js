@@ -3,6 +3,8 @@ import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
+
+import * as request from '~/utils/request';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import { SearchIcon } from '~/components/Icons';
@@ -29,15 +31,23 @@ function Search() {
         }
         setLoading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(searchValue)}&type=less`)
-            .then((res) => res.json())
-            .then((res) => {
+        const fetchAPi = async () => {
+            try {
+                const res = await request.get(`users/search`, {
+                    params: {
+                        q: searchValue,
+                        type: 'less',
+                    },
+                });
                 setSearchResult(res.data);
                 setLoading(false);
-            })
-            .catch(() => {
+            } catch (error) {
                 setLoading(false);
-            });
+            }
+        };
+        fetchAPi();
+
+        
     }, [debounced]);
 
     const handleClear = () => {
