@@ -4,14 +4,36 @@
     padding: 8px;
     font-size: 1.8rem;
     font-weight: 700;
-    box-sizing: border-box;
     border-radius: 4px;
-    transition: background ease-in-out 200ms;
-    &:hover{
-        background: rgba(22, 24, 35, .03);
+    color: var(--text-color);
+    transition: background-color ease-in-out 200ms;
+
+    &.active {
+        color: var(--primary);
+
+        .icon {
+            display: none;
+        }
+
+        .active-icon {
+            display: flex;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
     }
 }
 
-.title{
+.title {
     margin-left: 10px;
+}
+
+.icon,
+.active-icon {
+    display: flex;
+}
+
+.active-icon {
+    display: none;
 }
