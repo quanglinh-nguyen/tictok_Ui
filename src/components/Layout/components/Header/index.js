@@ -17,7 +17,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
-import { UploadIcon, InboxIcon, MessageIcon, SearchIcon } from '~/components/Icons';
+import { UploadIcon, InboxIcon, MessageIcon } from '~/components/Icons';
 import Image from '~/components/Image'
 import Search from '../Search';
 import routesConfig from '~/config/routes';
@@ -39,7 +39,7 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
-                },
+                }, 
             ],
         },
     },
