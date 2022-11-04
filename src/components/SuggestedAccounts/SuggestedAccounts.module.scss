@@ -3,14 +3,13 @@
 }
 
 .label {
-    font-size: 1.4rem;
     padding: 8px;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
 .account-item {
     display: flex;
-    align-items: center;
     padding: 8px;
     cursor: pointer;
 }
@@ -28,15 +27,16 @@
 }
 
 .nickname {
+    margin-top: 0;
     font-size: 1.6rem;
     color: #161823;
     line-height: 1;
 }
 
 .check {
-    font-size: 1.4rem;
-    color: #20D5EC;
     margin-left: 4px;
+    font-size: 1.4rem;
+    color: #20d5ec;
 }
 
 .name {
@@ -44,7 +44,7 @@
     opacity: #161823bf;
 }
 
-.mode-btn {
+.more-btn {
     padding: 8px;
     font-size: 1.4rem;
     font-weight: 700;

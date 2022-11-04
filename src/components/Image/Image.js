@@ -26,8 +26,8 @@ const Image = forwardRef(({ src, alt, className, fallback: customFallback = imag
 Image.propTypes = {
     src: PropTypes.string,
     alt: PropTypes.string,
-    class: PropTypes.string,
+    className: PropTypes.string,
     fallback: PropTypes.string,
-}
+};
 
 export default Image;

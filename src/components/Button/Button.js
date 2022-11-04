@@ -13,28 +13,28 @@ function Button({
     text = false,
     rounded = false,
     disabled = false,
-    children,
     small = false,
     large = false,
+    children,
     className,
     leftIcon,
     rightIcon,
     onClick,
-    ...pasProps
+    ...passProps
 }) {
     let Comp = 'button';
     const props = {
         onClick,
-        ...pasProps,
+        ...passProps,
     };
 
-    // remove event listener when btn is Disabled
-    if(disabled) {
-        Object.keys(props).forEach(key => {
-            if(key.startsWith('on') && typeof props[key] === 'function') {
+    // Remove event listener when btn is disabled
+    if (disabled) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
                 delete props[key];
             }
-        })
+        });
     }
 
     if (to) {
@@ -46,27 +46,26 @@ function Button({
     }
 
     const classes = cx('wrapper', {
+        [className]: className,
         primary,
         outline,
+        text,
+        disabled,
         rounded,
         small,
         large,
-        text,
-        disabled,
-        [className]: className,
     });
 
     return (
         <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
-                <span className={cx('title')}>{children}</span>
+            <span className={cx('title')}>{children}</span>
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
 }
 
 Button.propTypes = {
-    children: PropTypes.node.isRequired,
     to: PropTypes.string,
     href: PropTypes.string,
     primary: PropTypes.bool,
@@ -76,11 +75,11 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     small: PropTypes.bool,
     large: PropTypes.bool,
-    className: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
     onClick: PropTypes.func,
 };
-
 
 export default Button;

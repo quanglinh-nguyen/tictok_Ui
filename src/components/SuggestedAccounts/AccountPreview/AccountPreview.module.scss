@@ -1,12 +1,12 @@
 .wrapper {
+    width: 320px;
     padding: 20px;
-    min-width: 320px
 }
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .avatar {
@@ -22,6 +22,7 @@
 
 .body {
     margin-top: 12px;
+    color: #161823;
 }
 
 .nickname {
@@ -30,7 +31,7 @@
 
 .check {
     font-size: 1.4rem;
-    color: #20D5EC;
+    color: #20d5ec;
     margin-left: 4px;
 }
 
@@ -40,10 +41,10 @@
 
 .analytics {
     margin-top: 10px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
-.value ~ .value{
+.value ~ .value {
     margin-left: 20px;
 }
 
